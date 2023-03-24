@@ -11,7 +11,7 @@ ul {
 }
 
 h1 {
-  font-size: 33px;
+  font-size: 30px;
   font-weight: 100;
   line-height: 28px;
   margin-bottom: 0;
@@ -90,4 +90,10 @@ small {
   cursor: pointer;
   transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
     border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+.tempUnits .active {
+  color: black;
+  cursor: default;
+  text-decoration: none;
 }
