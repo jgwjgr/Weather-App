@@ -1,7 +1,8 @@
 function displayWeather(response) {
   document.querySelector("#city").innerHTML = response.data.name;
-  document.querySelector("#temperature").innerHTML =
-    Math.round(response.data.main.temp) + "°C";
+  document.querySelector("#temperature").innerHTML = Math.round(
+    response.data.main.temp
+  );
   iconElement.setAttribute(
     "src",
     `https://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
