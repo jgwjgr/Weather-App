@@ -8,6 +8,8 @@ function displayWeather(response) {
     `https://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
   );
   descriptionElement.innerHTML = response.data.weather[0].description;
+  humidityElement.innerHTML = response.data.main.humidity;
+  windElement.innerHTML = Math.round(response.data.wind.speed);
 }
 
 function searchCity(city) {
@@ -27,3 +29,5 @@ searchForm.addEventListener("submit", handleSubmit);
 
 let iconElement = document.querySelector("#icon");
 let descriptionElement = document.querySelector("#description");
+let humidityElement = document.querySelector("#humidity");
+let windElement = document.querySelector("#wind");
