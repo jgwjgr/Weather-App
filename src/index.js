@@ -6,6 +6,7 @@ function displayWeather(response) {
     "src",
     `https://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
   );
+  descriptionElement.innerHTML = response.data.weather[0].description;
 }
 
 function searchCity(city) {
@@ -24,3 +25,4 @@ let searchForm = document.querySelector("#search-form");
 searchForm.addEventListener("submit", handleSubmit);
 
 let iconElement = document.querySelector("#icon");
+let descriptionElement = document.querySelector("#description");
