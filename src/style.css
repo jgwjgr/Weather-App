@@ -107,6 +107,11 @@ small {
 .weather-forecast {
   margin-top: -85px;
   color: black;
+  text-align: center;
+}
+
+.weather-forecast .row {
+  display: flex;
 }
 
 .weather-forecast-date {
