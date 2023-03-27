@@ -21,6 +21,7 @@ small {
   max-width: 600px;
   margin: 30px auto;
   display: block;
+  margin-top: -20px;
 }
 
 .overview {
@@ -104,7 +105,7 @@ small {
 }
 
 .weather-forecast {
-  margin-top: -50px;
+  margin-top: -85px;
   color: black;
 }
 
