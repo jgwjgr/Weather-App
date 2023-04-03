@@ -54,13 +54,13 @@ function displayForecast(response) {
                       width="44"
                     />
                     <div class="weather-forecast-temperatures">
-                    &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+                    &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
                       <span class="weather-forecast-temperature-max">
                         ${Math.round(forecastDay.temp.max)}°
                       </span>
                       <span class="weather-forecast-temperature-min">
                         ${Math.round(forecastDay.temp.min)}°
-                      </span>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+                      </span>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
                     </div>
                   </div>
                
@@ -113,9 +113,12 @@ function searchCity(city) {
 
 function handleSubmit(event) {
   event.preventDefault();
-  let city = document.querySelector("#city-input");
-  searchCity(city.value);
+  let cityInputElement = document.querySelector("#city-input");
+  searchCity(cityInputElement.value);
 }
+
+let searchForm = document.querySelector("#search-form");
+searchForm.addEventListener("submit", handleSubmit);
 
 function displayFahrenheitTemperature(event) {
   event.preventDefault();
@@ -137,11 +140,10 @@ function displayCelsiusTemperature(event) {
 }
 let celsiusTemperature = null;
 
-let searchForm = document.querySelector("#search-form");
-searchForm.addEventListener("submit", handleSubmit);
-
 let fahrenheitLink = document.querySelector("#fahr-link");
 fahrenheitLink.addEventListener("click", displayFahrenheitTemperature);
 
 let celsiusLink = document.querySelector("#celsius-link");
 celsiusLink.addEventListener("click", displayCelsiusTemperature);
+
+searchCity("Paris");
